@@ -58,7 +58,7 @@
             <p><strong>Comment:</strong> <%= ratings[i].comment %></p>
             <p><em>By: <%= ratings[i].username %></em></p>
             <!-- Add a button that calls a deleteRating function with its id passed as input -->
-
+             <button onClick="deleteTeacher('<%= teachers[i]._id %>')">Delete Teacher</button>
           </div>
         </div>
       <% } %>
