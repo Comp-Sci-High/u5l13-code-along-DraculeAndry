@@ -58,7 +58,20 @@
             <p><strong>Comment:</strong> <%= ratings[i].comment %></p>
             <p><em>By: <%= ratings[i].username %></em></p>
             <!-- Add a button that calls a deleteRating function with its id passed as input -->
-             <button onClick="deleteTeacher('<%= teachers[i]._id %>')">Delete Teacher</button>
+             <button onClick="deleteRating('<%= ratings[i]._id %>')">Delete Rating</button>
+             <button onClick="toggleEditForm('<%= ratings[i]._id %>')">Edit Rating</button>
+            <!-- Update form -->
+            <form class="update-form" id="update-form-<%= ratings[i]._id %>" data-id="<%= ratings[i]._id %>">
+              <label>Username: </label>
+              <input type="text" name="username" value="<%= ratings[i].username %>" />
+              <label>Teacher: </label>
+              <input type="text" name="teacher" value="<%= ratings[i].teacher %>" />
+              <label>Comment: </label>
+              <input type="text" name="comment" value="<%= ratings[i].comment %>" />
+              <label>Rating: </label>
+              <input type="number" name="rating" min="1" max="5" value="<%= ratings[i].rating %>" />
+              <button type="submit">Update Rating</button>
+            </form>
           </div>
         </div>
       <% } %>

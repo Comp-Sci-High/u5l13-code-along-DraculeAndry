@@ -153,6 +153,11 @@ button:hover {
   background-color: #2e5e42;
 }
 
+.update-form {
+  display: none;
+  margin-top: 20px;
+}
+
 /* Responsive tweaks */
 @media (max-width: 600px) {
   h1 {
